@@ -1,0 +1,40 @@
+body {
+        background-color: slateblue;
+        color: whitesmoke;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.container input {
+    grid-column: 1;
+}
+
+.form-control {
+    background: rgba(215, 18, 149, 0.597);
+    color: whitesmoke;
+    border-color: blanchedalmond;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input::placeholder {
+    color:whitesmoke;
+    opacity: 0.5;
+}
+
+.border {
+    background: rgba(215, 18, 149, 0.597);
+    text-decoration: none;
+    border-radius: 0 0 0 25px;
+    grid-column: 1 / span 3;
+    margin: 1px;
+    padding: 0.8rem;
+}
