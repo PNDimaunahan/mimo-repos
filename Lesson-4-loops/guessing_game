@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mimo: Lesson 4 | Guessing Game</title>
+        <link rel="icon" type="image/png" alt="odin-logo" href="https://www.seekpng.com/png/detail/827-8273708_odin-project.png">
+        <link rel="stylesheet" type="text/css" href="/Lesson-4-loops/assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <h1>Guessing Game</h1>
+                <p>Guess a number between 1 and 50<br> You have 5 attempts to win!</p>
+                <div class="form">
+                    <input id="inputId" class="input-dsgn" type="number" placeholder="Enter Number Here...">
+                    <button id="submit-btn" class="btn-dsgn" type="submit">Submit Guess</button>
+                </div>
+                <div id="alertBox" class="alert"></div>
+            </div>
+        </div>
+    </body>
+    <script src="/Lesson-4-loops/assets/js/script.js"></script>
+</html>
