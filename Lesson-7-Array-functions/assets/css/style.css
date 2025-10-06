@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+body{
+    background: gray;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: white;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 12px;
+}
+
+.trivia-header {
+    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px 30px 10px 30px;
+}
+
+.trivia-content {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 0 30px 20px 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trivia-question{
+    text-align: center;
+    margin-bottom: 10px;
+    transition: opacity 0.3 ease;
+}
+
+.start-button{
+    background: rgb(234, 81, 34);
+    font-weight: bolder;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 230px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.start-button:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(234, 81, 34);
+    transform: translateY(-2px);
+}
+
+.trivia-options {
+    display: none;
+    flex-direction: row;
+    gap:9px;
+}
+
+.trivia-options button{
+    background: rgb(34, 54, 234);
+    font-weight: bolder;
+    align-items: center;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.trivia-options button:hover{
+    background: rgb(80, 149, 28);
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+}
+
+.progress-container {
+    display: none;
+    background: #ddd;
+    border-radius: 8px;
+    height: 10px;
+    width: 100%;
+}
+
+.progress-bar {
+    height: 10px;
+    background: rgb(50, 205, 50);
+    width: 0%;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.alert{
+    text-align: center;
+    grid-column: 1 / span 2;
+    margin: 10px 0 10px 0;
+    min-height: 12px;
+}
