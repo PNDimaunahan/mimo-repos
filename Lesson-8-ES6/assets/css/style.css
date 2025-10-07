@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+/*Structure Styles*/
+
+body{
+    background: rgb(207, 0, 121);
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header-logo{
+  margin: 0 auto 20px;
+  width: 450px;
+  display: block;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #463d3d;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 700px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 20px;
+    gap: 6px;
+}
+
+.card-image{
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-title {
+    font-weight: bold;
+}
+
+.character-location span,
+.character-episode span {
+    color: #a1a1a1;
+    font-weight: 500;
+}
+
+.character-location,
+.character-episode {
+    margin: 4px 0;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+}
+
+.status.alive {
+    color: #4caf50;
+}
+
+.status.dead {
+    color: #f44336;
+}
+
+.status.unknown {
+    color: #9e9e9e;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 700px;
+    width: 90%;
+    padding: 25px 30px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-image {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.character-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.character-top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.character-title-modal {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.character-type,
+.character-status {
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    background: #eee;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.character-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.details-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.details-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.details-divider-upward {
+    border: none;
+    border-right: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.details-column {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 6px 12px;
+}
+
+.character-episodes {
+    margin-top: 12px;
+}
+
+.episodes-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.episode-btn {
+    padding: 6px 2px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #4f4a4a;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.episode-btn:hover {
+    background: #ddd;
+}
+
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+
+/*Hover Styles*/
+
+.card:hover {
+    background: #4f4a4a;
+    color: black;
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.card:hover .character-title{
+    color: orange;
+}
